@@ -102,3 +102,10 @@ input[type="text"] {
   border-bottom: dotted 1px #000;
   box-sizing: border-box;
 }
+input[type="number"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: dotted 1px #000;
+  box-sizing: border-box;
+}

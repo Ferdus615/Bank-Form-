@@ -11,21 +11,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "<br> <br>";
 
     //Name of the Account (In English Block Letter):
-    if(empty($_POST["AfirstName"])){
-        echo "Name(English): ";
-    }else{
-        $firstname = ($_POST["AfirstName"]);
-        if($firstname === strtoupper($firstname)){
-            echo "Name(English): "."$firstname";
+    if(empty($_POST["AfirstName"])){                            // checks if the field is empty
+        echo "Name(English): ";                                 // if its empty sends this msg
+    }else{                                                      // run this code snippet
+        $firstname = htmlspecialchars($_POST["AfirstName"]);    // takes the feilds value puts it in the variable
+        if($firstname === strtoupper($firstname)){              // checks if the field data is in all caps 
+            echo "Name(English): "."$firstname";                // if its true prints this line with data
             echo "<br>";
-        }else{
+        }else{                                                  // else print this line
             echo "Name(English): "."PLEASE FILL UP WITH ALL BLOCK LETTERS";
         }
     }
     echo "<br>";
 
     //হিসাবের শিরোনাম (বাংলায়):
-    $Banglafirstname = ($_POST["BfirstName"]);
+    $Banglafirstname = htmlspecialchars($_POST["BfirstName"]); // the "htmlspecialchars" takes the input data and converts it into html special charactor for security resons so that no code can be executed in the input field
     echo "হিসাবের শিরোনাম (বাংলায়): "."$Banglafirstname";
     echo "<br>";
 
@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "Type of Account: " . "$ACC_type";
         }
         //other
-        $other_ACC = ($_POST["Other_ACC"]);
+        $other_ACC = htmlspecialchars($_POST["Other_ACC"]);
         echo " ($other_ACC)";
     }
     echo "<br>";
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "Currency: " . "$currency";
         }
         //other
-        $Currency = ($_POST["Currency"]);
+        $Currency = htmlspecialchars($_POST["Currency"]);
         echo " ($Currency)";
     }
     echo "<br>";
@@ -63,16 +63,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "Mode of Operation of Account: " . "$MOA";
         }
         //other
-        $MODE_OP_ACC = ($_POST["MODE_OP_ACC"]);
+        $MODE_OP_ACC = htmlspecialchars($_POST["MODE_OP_ACC"]);
         echo " ($MODE_OP_ACC)";
     }
     echo "<br>";
 
     //Amount of Initial Deposit:
     echo "Amount of Initial Deposit:";
-    $In_Figure = ($_POST["In_Figure"]);
+    $In_Figure = htmlspecialchars($_POST["In_Figure"]);
     echo " [In Figure:" . "$In_Figure] /";
-    $In_Word = ($_POST["In_Word"]);
+    $In_Word = htmlspecialchars($_POST["In_Word"]);
     echo " [In Word:" . "$In_Word]";
     echo "<br>";
 
@@ -93,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "<br> <br>";
 
     //A/C No:
-    $AC_no = ($_POST["A/C_No"]);
+    $AC_no = htmlspecialchars($_POST["A/C_No"]);
     echo "A/C_No: ". "$AC_no" ;
     echo "<br>";
 
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($_POST["A2firstName"])){
         echo "Name(English): ";
     }else{
-        $A2firstName = ($_POST["A2firstName"]);
+        $A2firstName = htmlspecialchars($_POST["A2firstName"]);
         if($firstname === strtoupper($A2firstName)){
             echo "Name(English): "."$A2firstName";
             echo "<br>";
@@ -112,42 +112,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "<br>";
 
     //হিসাবের শিরোনাম (বাংলায়):
-    $B2firstName = ($_POST["B2firstName"]);
+    $B2firstName = htmlspecialchars($_POST["B2firstName"]);
     echo "হিসাবের শিরোনাম (বাংলায়): " . "$B2firstName";
     echo "<br>";
 
     //Date of Birth:
-    $DOB = ($_POST["DOB"]);
+    $DOB = htmlspecialchars($_POST["DOB"]);
     echo "Date of Birth: " . "$DOB";
     echo "<br>";
 
     //Father's Name:
-    $FatherName = ($_POST["FatherName"]);
+    $FatherName = htmlspecialchars($_POST["FatherName"]);
     echo "Father's name: " . "$FatherName";
     echo "<br>";
 
     //Mother's Name:
-    $MotherName = ($_POST["MotherName"]);
+    $MotherName = htmlspecialchars($_POST["MotherName"]);
     echo "Mother's Name: " . "$MotherName";
     echo "<br>";
 
     //Name of spouse:
-    $SpouseName = ($_POST["SpouseName"]);
+    $SpouseName = htmlspecialchars($_POST["SpouseName"]);
     echo "Name of spouse: " . "$SpouseName";
     echo "<br>";
 
     //Photo
-    $image = ($_POST["image"]);
+    $image = htmlspecialchars($_POST["image"]);
     echo "Your Photo: " . "$image";
     echo "<br>";
 
     //Nationality:
-    $Nationality = ($_POST["Nationality"]);
+    $Nationality = htmlspecialchars($_POST["Nationality"]);
     echo "Nationality: " . "$Nationality";
     echo "<br>";
 
     //Gender
-    $Gender = ($_POST["Gender"]);
+    $Gender = htmlspecialchars($_POST["Gender"]);
     echo "Gender: " . "$Gender";
     echo "<br>";
 
@@ -162,69 +162,69 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "<br>";
 
     //Occupation (Detailed):
-    $Occupation = ($_POST["Occupation"]);
+    $Occupation = htmlspecialchars($_POST["Occupation"]);
     echo "Occupation: " . "$Occupation";
     echo "<br>";
 
     //Monthly Income:
-    $Income = ($_POST["Income"]);
+    $Income = htmlspecialchars($_POST["Income"]);
     echo "Monthly income: " . "$Income";
     echo "<br>";
 
     //Source of Fund (Detailed):
-    $Fund = ($_POST["Fund"]);
+    $Fund = htmlspecialchars($_POST["Fund"]);
     echo "Source of Fund: " . "$Fund";
     echo "<br>";
 
     //Tax Identification No. (TIN) If applicable:
-    $TIN = ($_POST["TIN"]);
+    $TIN = htmlspecialchars($_POST["TIN"]);
     echo "Tax Identification No(TIN): " . "$TIN";
     echo "<br>";
 
     //Present Address:
-    $R_V = ($_POST["R_V"]);
-    $PO = ($_POST["PO"]);
-    $PS = ($_POST["PS"]);
-    $DIS = ($_POST["DIS"]);
+    $R_V = htmlspecialchars($_POST["R_V"]);
+    $PO = htmlspecialchars($_POST["PO"]);
+    $PS = htmlspecialchars($_POST["PS"]);
+    $DIS = htmlspecialchars($_POST["DIS"]);
     echo "Permanent Address: " . " Road/Village: " ."$R_V" . ", Post office:" 
     . "$PO" . ", Police Station:". "$PS" . ", District:" . "$DIS";
     echo "<br>";
 
     //Permanent Address:
-    $P_R_V = ($_POST["P_R_V"]);
-    $P_PO = ($_POST["P_PO"]);
-    $P_PS = ($_POST["P_PS"]);
-    $P_DIS = ($_POST["P_DIS"]);
-    $P_Number = ($_POST["P_Number"]);
-    $P_Email = ($_POST["P_Email"]);
+    $P_R_V = htmlspecialchars($_POST["P_R_V"]);
+    $P_PO = htmlspecialchars($_POST["P_PO"]);
+    $P_PS = htmlspecialchars($_POST["P_PS"]);
+    $P_DIS = htmlspecialchars($_POST["P_DIS"]);
+    $P_Number = htmlspecialchars($_POST["P_Number"]);
+    $P_Email = htmlspecialchars($_POST["P_Email"]);
     echo "Permanent Address: " . " Road/Village: " ."$P_R_V" . ", Post office: " . "$P_PO" . ", Police Station: " 
     . "$P_PS" . ", District: " . "$P_DIS" . ", Phone Number: " . "$P_Number" . ", Email: " . "$P_Email";
     echo "<br>";
 
     //National ID Card No:
-    $NID = ($_POST["NID"]);
+    $NID = htmlspecialchars($_POST["NID"]);
     echo "National ID Card No: " . "$NID";
     echo "<br>";
 
     //Passport No./ Birth Registration No./ Others<sup>2</sup> / To be mentioned specifically:
-    $Docu = ($_POST["Docu"]);
+    $Docu = htmlspecialchars($_POST["Docu"]);
     echo "Other Documents: " . "$Docu";
     echo "<br>";
 
     echo "Introducer's Information: In case of unavailability of NID: ";
 
     //Name:
-    $UN_name = ($_POST["UN_name"]);
+    $UN_name = htmlspecialchars($_POST["UN_name"]);
     echo "Name: " . "$UN_name";
     echo "<br>";
 
     //Account / National ID Card No. (with date of birth):
-    $UN_NID = ($_POST["UN_NID"]);
+    $UN_NID = htmlspecialchars($_POST["UN_NID"]);
     echo "Account / National ID Card No. (with date of birth): " . "$UN_NID";
     echo "<br>";
     
     //Signature (with date):
-    $Sign = ($_POST["Sign"]);
+    $Sign = htmlspecialchars($_POST["Sign"]);
     echo "Signature (with date): " . "$Sign";
     echo "<br>";
 
