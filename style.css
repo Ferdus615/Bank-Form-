@@ -4,16 +4,31 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: bisque;
+}
+
 .container {
-  background-color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   padding: 50px;
   line-height: 25px;
 }
 
-li {
-  margin-left: 100px;
+.name {
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.branch {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  letter-spacing: 10px;
+  margin-left: 15px;
+  margin-bottom: 30px;
 }
 
 .Title {
@@ -23,7 +38,7 @@ li {
   color: aliceblue;
   padding: 5px;
   border: solid 1px #000;
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(150, 150, 150);
   margin: 10px 0;
 }
 
@@ -34,13 +49,15 @@ li {
 .acno {
   display: flex;
   justify-content: end;
+  padding-bottom: 20px;
+}
+
+.top6 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .photo {
-  position: absolute;
-  right: 50px;
-  top: 400px;
-
   overflow: hidden;
   cursor: pointer;
   color: aliceblue;
@@ -51,7 +68,7 @@ li {
   background-color: rgb(172, 172, 172);
 }
 .photo p {
-  position: absolute;
+  position: relative;
   top: 60px;
   left: 35px;
 }
@@ -59,6 +76,7 @@ input[type="file"] {
   opacity: 0;
   width: 150px;
   height: 150px;
+  cursor: pointer;
 }
 
 .nation,
@@ -72,8 +90,11 @@ input[type="file"] {
   margin-left: 100px;
 }
 
+li {
+  margin: 0 100px;
+}
 .address,
-.identy {
+.identity {
   margin-left: -80px;
 }
 
@@ -85,7 +106,7 @@ input[type="file"] {
 
 .btn {
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   background-color: rgb(0, 0, 0);
   width: 100%;
@@ -93,6 +114,11 @@ input[type="file"] {
   font-weight: bold;
   color: aliceblue;
   text-transform: uppercase;
+}
+.btn:hover {
+  color: #000;
+  background-color: aliceblue;
+  cursor: pointer;
 }
 
 input[type="text"] {
@@ -108,4 +134,40 @@ input[type="number"] {
   background: transparent;
   border-bottom: dotted 1px #000;
   box-sizing: border-box;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  color: aliceblue;
+  background-color: rgb(114, 114, 114);
+  display: flex;
+  justify-content: center;
+}
+
+.myinfo {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.backbtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.back {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: aliceblue;
+  background-color: black;
+  padding: 15px;
+  width: 50%;
+  border-radius: 10px;
 }

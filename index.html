@@ -12,6 +12,11 @@
 
 <div class="container">
 
+        <div class="bankinfo">
+            <p class="name">SEU BANK</p>
+            <p class="branch">Tejgoan Branch</p>
+        </div>
+
     <form class="form" action="form.php" method="POST"> 
 
         <div class="Title">
@@ -24,7 +29,7 @@
             <div class="name1">
                 <li>
                     <label class="Ename1">Name of the Account (In English Block Letter): </label>
-                        <input type="text" name="AfirstName">
+                        <input required type="text" name="AfirstName">
                     <br>
                     <label class="Bname">হিসাবের শিরোনাম (বাংলায়): </label>
                         <input type="text" name="BfirstName">            
@@ -116,11 +121,15 @@
         <div class="secondpart">
 
             <div class="acno">
-                <label class="acno">A/C No:</label> 
+                <label>A/C No:</label> 
                     <input type="text" name="A/C_No" placeholder="For Bank's Use Only"> 
             </div>
 
             <ol type="1">
+
+            <div class="top6">
+
+                <div class="top5">
                         <li>
                             <label>Name of the Account (In English Block Letter):</label> 
                                 <input type="text" name="A2firstName">
@@ -133,27 +142,29 @@
                             <label>Date of Birth: </label> 
                                 <input type="date" name="DOB">          
                         </li>
-
+    
                         <li>
                             <label>Father's Name: </label>  
                                 <input type="text" name="FatherName">           
                         </li>
-
+    
                         <li>
                             <label>Mother's Name: </label>
                                 <input type="text" name="MotherName">            
                         </li>
-
+    
                         <li>
                             <label>Name of spouse: </label>
                                 <input type="text" name="SpouseName">             
                         </li>
-                    
+                </div>
 
-                    <div class="photo">
-                        <p>Photo Here</p>
-                        <input class="img" type="file" name="image" accept="image/*">
-                    </div>
+                <div class="photo">
+                    <p>Photo Here</p>
+                    <input class="img" type="file" name="image" accept="image/*">
+                </div>
+
+            </div>
                 
                 <div class="nation">
                     <li>
@@ -231,7 +242,7 @@
                                 <label>Email:</label> 
                                     <input type="text" name="P_Email">
                             </li>
-                        </ol>  
+                         </ol> 
                     </div>
 
                 </li>
@@ -239,7 +250,7 @@
                 <li> 
                     <p>Identification:</p>
 
-                    <div class="identy">
+                    <div class="identity">
                         <ol type="a">
                             <li>
                                 <label>National ID Card No:</label> 
@@ -271,6 +282,14 @@
 
     </form>
 </div>
+
+<footer>
+    <div class="myinfo">
+        <p>Ferdus Rhaman</p>
+        <p>2020000000038</p>
+        <p>Batch-54</p>
+    </div>
+</footer>
 
 </body>
 </html>
